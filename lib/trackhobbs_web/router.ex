@@ -17,6 +17,7 @@ defmodule TrackhobbsWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/oauth/slack", OauthController, :slack
   end
 
   # Other scopes may use custom stacks.

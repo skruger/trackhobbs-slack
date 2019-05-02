@@ -72,4 +72,4 @@ config :trackhobbs, Trackhobbs.Repo,
   password: "trackhobbs",
   database: "trackhobbs_slackbot_dev",
   hostname: "localhost",
-  pool_size: 10
+  pool_size: 3

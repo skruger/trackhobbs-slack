@@ -20,7 +20,7 @@ defmodule Trackhobbs.MixProject do
   def application do
     [
       mod: {Trackhobbs.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :httpoison],
     ]
   end
 
@@ -33,6 +33,7 @@ defmodule Trackhobbs.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:httpoison, "~> 1.5.1"},
       {:slack, "~> 0.19.0"},
       {:phoenix, "~> 1.4.3"},
       {:phoenix_pubsub, "~> 1.1"},

@@ -11,9 +11,10 @@ defmodule Trackhobbs.Application do
       # Start the Ecto repository
       Trackhobbs.Repo,
       # Start the endpoint when the application starts
-      TrackhobbsWeb.Endpoint
+      TrackhobbsWeb.Endpoint,
       # Starts a worker by calling: Trackhobbs.Worker.start_link(arg)
       # {Trackhobbs.Worker, arg},
+#      %{id: Trackhobbs.SlackBot, start: {Trackhobbs.SlackBot, :start_link, ["xoxb-xxxxxxx", name: :testingbot]}}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
