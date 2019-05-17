@@ -1,1 +1,3 @@
-Thank you for adding Trackhobbs to the <%= @team_name %> slack workspace.
+Thank you for adding Trackhobbs to the <%= @bot_instance.team_name %> slack workspace.
+<br/>
+<%= @bot_instance.bot_user_id %>

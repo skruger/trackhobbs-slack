@@ -18,6 +18,7 @@ defmodule TrackhobbsWeb.Router do
 
     get "/", PageController, :index
     get "/oauth/slack", OauthController, :slack
+    get "/oauth/slack2", OauthController, :slack_done
   end
 
   # Other scopes may use custom stacks.

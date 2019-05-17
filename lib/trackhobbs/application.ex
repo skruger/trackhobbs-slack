@@ -15,11 +15,13 @@ defmodule Trackhobbs.Application do
       # Starts a worker by calling: Trackhobbs.Worker.start_link(arg)
       # {Trackhobbs.Worker, arg},
 #      %{id: Trackhobbs.SlackBot, start: {Trackhobbs.SlackBot, :start_link, ["xoxb-xxxxxxx", name: :testingbot]}}
+      {Trackhobbs.SlackBot.Sup, [nil]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Trackhobbs.Supervisor]
+    opts = [strategy: :one_for_one, name: :"Trackhobbs.Supervisor"]
+    :observer.start
     Supervisor.start_link(children, opts)
   end
 
